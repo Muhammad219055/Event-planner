@@ -1,0 +1,233 @@
+h1,h2,h3,h4,h5,h6,p{ margin: 0px;}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 3px rgba(227,228, 237, 0.37);
+  /* border: 2px solid rgba(255, 255, 255, 0.18); */
+  position: sticky;
+  top: 0;
+  padding:10px 8%;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+body {margin:0px; font-family: "Playpen Sans"; background-color: #000000; color: #c0c0c0;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+}
+
+.logo{
+  font-family: 'Jacquarda Bastarda 9';
+  font-size: 42px;
+  cursor: pointer;
+}
+.logo .char {
+  display: inline-block;
+  transition: color 0.3s ease;
+  transform-origin: center bottom;
+}
+
+.logo .char:hover {
+  color:rgb(183, 175, 63) ;
+}
+.pages{
+  display: flex;
+  gap: 8px;
+  background: transparent;
+}
+
+.pages a{
+  transition: all .3s ease;
+}
+.page{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.activePage{
+  color: rgb(183, 175, 63);
+  text-decoration: none;
+}
+.react-time-picker__clock {
+  display: none;
+}
+
+.upcoming-grid{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 10px;
+  overflow-x: auto;
+  width: 100%;
+  padding: 0px 8%;
+  box-sizing: border-box;
+  margin-top: 45px;
+}
+
+.event-card{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid #7c7c7c;
+  border-radius: 8px;
+  padding: 20px 35px;
+}
+
+
+.edit-event-btn, .del-event-btn, .save-event-btn{
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.input-field-label{
+  display: flex;
+  flex-direction: column;
+  gap:4px;
+}
+
+.event-form{
+  margin: 0px 35%;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
+  
+}
+
+.event-form::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  border-bottom: 2px solid #333;
+  border-radius: 50% 50% 0 0;
+}
+
+.adding-event-form{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.date-calender{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.react-calendar{
+  width: 100%;
+  aspect-ratio: auto;
+  border-radius: 6px;
+  background-color:#c0c0c0;
+  font-family: Playpen Sans;
+}
+.react-time-picker__button{
+  display: none;
+}
+
+
+.react-calendar__tile--now{
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  font-weight: 700;
+}
+
+.react-calendar__tile--active, .react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus{
+  background-color: rgb(183, 175, 63);
+  color: #121212;
+  /* font-weight: 600; */
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.react-calendar button{
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.input-field-label input{
+  background-color: #c0c0c0;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-family: Playpen Sans;
+  border-radius: 6px;
+}
+
+.label-time{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: space-between;
+}
+
+.react-time-picker__wrapper{
+  border: 1px solid #c0c0c0;
+  border-radius: 6px;
+  padding: 5px 5px;
+}
+.react-time-picker__inputGroup__input:invalid{
+  background-color: transparent;
+}
+.react-time-picker__inputGroup__input:focus{
+  outline: none;
+  border: none;
+}
+
+.add-event-btn{
+  background-color:rgb(183, 175, 63) ;
+  padding: 10px 10px;
+  border-radius: 50%;
+  width: fit-content;
+  aspect-ratio: 1/1;
+  margin: 0px auto 0;
+  position: relative;
+  top: -20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family:Playpen Sans;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .pages{
+      display:none;
+  }
+  .mobile-pages{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-pages svg path{
+    /* stroke: #FFFFFF; */
+    fill: #FFFFFF;
+  }
+  .mobile-pages svg{
+    width: 30px;
+    height: 30px;
+  }
+  .active-mob-page svg path{
+    stroke: rgb(183, 175, 63);
+  }
+  .event-form{
+    margin: 30px 8%;
+    box-shadow: 0px 0px 15px #c0c0c0;
+  }
+}
